@@ -35,9 +35,10 @@
 		else
 		{
 			echo 'Invalid Patient';
-			include 'requestPage.html';
+			#include 'requestPage.html';
 		}
 	}
+	echo 'got uID of patient';
 
 	// Get permissions of professional with pID
 	$query = "SELECT * FROM loginData";
@@ -58,13 +59,14 @@
 				  if ( $category == $row['category'])
 				  {
 					 $htmlReturn .= "<tr><td>".$row['date']."</td><td>".$row['name']."</td><td>".$row['description']."</td></tr>";
+					 echo $htmlReturn;
 				  }
 				}
 			}
 		}
 	}
   $htmlReturn .= "</table>";
-  
+
   setcookie("table", $htmlReturn, time()+3600);
 
 	mysqli_close($connect);
