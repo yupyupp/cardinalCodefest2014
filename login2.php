@@ -27,6 +27,8 @@
 			{
 				setcookie("uid", $row['uID'], time()+3600);
 				
+				header('Location: https://cin.kc8khl.net/cardinalCodefest2014/requestPage.html');
+				
 				//echo "Account successfully logged in";
 			}
 			else
