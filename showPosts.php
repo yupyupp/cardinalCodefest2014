@@ -13,8 +13,23 @@
 	    echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	}
 
-	$result = mysqli_query($connect,"SELECT * FROM messages");
+	
+	
+	
+	
+	
+	
+	
+	$query = "SELECT * FROM messages WHERE threadID = " . $_COOKIE['threadID'];
+	
+	$result = mysqli_query($connect,$query);
+	//WHERE threadID = COOKIE[threadID]
 
+	
+	
+	
+	
+	
 	
 	
 	echo "<table border='1'>";
