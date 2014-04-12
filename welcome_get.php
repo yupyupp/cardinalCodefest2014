@@ -1,13 +1,13 @@
-//stuff lol comments
 <?php
+    include 'globals.php';
+?>
+
+<?php
+	//stuff lol comments
+	
+	
 	//create connection and store the data for later use
 	//host, username, password, dbname
-	$host = 'http://cin.kc8khl.net';
-	$user = 'michael';
-	$pass = 'passwordz';
-	
-	$db = 'cardinalCodeFest';
-	
 	$connect = mysqli_connect($host,$user,$pass, $db);
 	
 	// Check connection

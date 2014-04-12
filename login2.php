@@ -1,12 +1,12 @@
+
+<?php
+    include 'globals.php';
+?>
+
+
 <?php
 	//create connection and store the data for later use
 	//host, username, password, dbname
-	$host = 'localhost'; 
-	$user = 'cardinalCodeFest'; 
-	$pass = 'test'; 
-	
-	$db = 'cardinalCodeFest';
-	
 	$connect = mysqli_connect($host,$user,$pass, $db);
 	
 	// Check connection
@@ -26,6 +26,8 @@
 			if ($row['password'] == $_POST['password'])
 			{
 				setcookie("uid", $row['uID'], time()+3600);
+				
+				header('Location: https://cin.kc8khl.net/cardinalCodefest2014/requestPage.html');
 				
 				//echo "Account successfully logged in";
 			}

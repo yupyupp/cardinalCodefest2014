@@ -2,7 +2,7 @@ uID,username,password,anon,doctor,,uID,category,name,date,description
 1,alice,123,y,,,1,GI,Broken arm,2014-02-01,He done broke his arm
 2,bob,234,n,,,1,CI,Death,2014-01-26,He done died
 3,jim,345,n,,,1,MED,Tylenol,1905-03-23,Yea he wanted tylenol
-4,allen,456,n,,,1,AL,Peanuts,1822-12-28,He can't eat them
+4,allen,456,n,,,1,AL,Peanuts,1822-12-28,He cant eat them
 5,drPaul,567,,y,,2,CI,Chronic hepatitis,2004-04-28,He has it
 6,drJon,678,,y,,2,MED,Drug A,2004-04-28,for hepatitis
 7,drPete,789,,y,,2,GI,Halitosis,1999-04-15,Smelly
