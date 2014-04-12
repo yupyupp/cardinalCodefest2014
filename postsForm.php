@@ -41,4 +41,10 @@
 
 	
 	mysqli_close($connect);
+	
+	
+	
+	header('Location: https://cin.kc8khl.net/cardinalCodefest2014/postsFront.html');
+	
+	
 ?>
