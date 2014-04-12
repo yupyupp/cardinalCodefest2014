@@ -38,6 +38,12 @@
 				include 'login.html';
 			}
 		}
+		else
+		{
+			echo "Incorrect password";
+			
+			include 'login.html';
+		}
 	}
 	
 	
