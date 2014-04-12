@@ -1,9 +1,10 @@
+//stuff lol comments
 <?php
 	//create connection and store the data for later use
 	//host, username, password, dbname
-	$host = 'localhost'; 
-	$user = 'cardinalCodeFest'; 
-	$pass = 'test'; 
+	$host = 'http://cin.kc8khl.net';
+	$user = 'michael';
+	$pass = 'passwordz';
 	
 	$db = 'cardinalCodeFest';
 	
@@ -26,15 +27,10 @@
 			if ($row['password'] == $_POST['password'])
 			{
 				setcookie("uid", $row['uID'], time()+3600);
-				
-				//echo "Account successfully logged in";
+				echo "Account successfully logged in";
 			}
 			else
-			{
 				echo "Incorrect password";
-				
-				include 'login.html';
-			}
 		}
 	}
 	
