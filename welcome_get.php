@@ -1,10 +1,11 @@
-
 <?php
     include 'globals.php';
 ?>
 
-//stuff lol comments
 <?php
+	//stuff lol comments
+	
+	
 	//create connection and store the data for later use
 	//host, username, password, dbname
 	$connect = mysqli_connect($host,$user,$pass, $db);
