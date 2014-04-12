@@ -4,4 +4,5 @@
 
 <?php
 	//other stuff goes here
+	echo "Rest of page goes here";
 ?>
