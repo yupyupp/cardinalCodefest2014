@@ -30,7 +30,7 @@
 		<img class = "logo" src="logo.png">
 
 		<div class="getInfo">
-			<form action="getPatientData.php" method="get">
+			<form action="welcome_get.php" method="get">
 					<select name="category">
 						  <option value="default" selected="selected"> Choose a category</option>
 						  <option value="GI">General Injuries</option>
