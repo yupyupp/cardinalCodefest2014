@@ -83,7 +83,7 @@
 				}
 
 			function cookieProcessor(cookie){
-			return processCookieSpace(processCookieExplamation(processCookieSemiColon(processCookieSlash(processCookieClosedTags(processCookieOpenTags(getCookie(cookie))))));}
+			console.log(return processCookieSpace(processCookieExplamation(processCookieSemiColon(processCookieSlash(processCookieClosedTags(processCookieOpenTags(getCookie(cookie)))))));}
 
 			
 		</script>
@@ -118,7 +118,7 @@
 					{
 						newWindow = window.open();
 						newDocument = newWindow.document;
-						newDocument.write("<html><head><title>Patient Summary</title></head><body>"+processCookieSpace(all)+"</body></html>");
+						newDocument.write("<html><head><title>Patient Summary</title></head><body>"+cookieProcessor(all)+"</body></html>");
 					} </script>
 			<button class="new" type="button" onclick="makePage()">Make List</button>
 			
