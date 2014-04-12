@@ -20,7 +20,7 @@
 					{
 						newWindow = window.open();
 						newDocument = newWindow.document;
-						newDocument.write("<html><head><title>Patient Summary<title></head><body><table?"+getCookie(all)+"</table></body></html>");
+						newDocument.write("<html><head><title>Patient Summary<title></head><body><table>"+getCookie(all)+"</table></body></html>");
 					}
 		</script>
 	</head>
@@ -30,7 +30,7 @@
 		<img class = "logo" src="logo.png">
 
 		<div class="getInfo">
-			<form action="welcome_get.php" method="get">
+			<form action="getPatientData.php" method="get">
 					<select name="category">
 						  <option value="default" selected="selected"> Choose a category</option>
 						  <option value="GI">General Injuries</option>
@@ -44,10 +44,12 @@
 		</div>
 		<div class="chosen">
 			<h2>Chosen Conditions</h2>
+			<ul>
 			<script>
 				var categories = getCookie(categories);
 				document.write(categories);
 			</script>
+			</ul>
 			<button class="new" type="button" onclick="makePage()">Make List</button>
 			
 		</div>
