@@ -13,11 +13,13 @@
 	
         
         
+        $tempInt = mysqli_num_rows($connect);
+        $tempInt = $tempInt + 1;
         
 
-	$sql = "INSERT INTO messages (threadID, uID, content)
+	$sql = "INSERT INTO messages (postCount, threadID, uID, content)
 	VALUES
-	('$_COOKIE[threadID]', '$_COOKIE[uid]', '$_POST[pContent]');";
+	('$tempInt', '$_COOKIE[threadID]', '$_COOKIE[uid]', '$_POST[pContent]');";
 
 
 
