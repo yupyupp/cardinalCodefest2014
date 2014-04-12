@@ -11,6 +11,7 @@
 					return "Error inbound captain";
 					};
 				//Open tags= "%3C" Close tags="%3E" Space="+"  /="%2F"  ;="%3A" !="%21"
+				//REcursive functions to search through the cookie strings and cleanse them
 			function processCookieOpenTags(cookie)
 				{
 				var result = "";
@@ -72,10 +73,11 @@
 				var index=cookie.indexOf("+");
 				if(index>=0)
 				{
-					result = cookie.substring(0,index)+" "+processCookieSpace(cookie.substring(index+2));
+					result = cookie.substring(0,index)+" "+processCookieSpace(cookie.substring(index+1));
 				}
 				return result;
 				}
+			//End minor cleanses
 
 			function cookieProcessor(cookie){
 			return console.log(processCookieSpace(processCookieExclamation(processCookieSemiColon(processCookieSlash(processCookieClosedTags(processCookieOpenTags(getCookie(cookie))))))));

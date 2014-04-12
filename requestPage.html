@@ -5,7 +5,7 @@
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
 		<title> Unexpected Packet Grabber </title>
 		<link rel="stylesheet" type="text/css" href="requestPage.css">
-		<script type="text/javascript" src="functions.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	</head>
 	<body>
 		<img class = "header" src="footer.png">
@@ -34,13 +34,20 @@
 			<ul>
 			<button class="fun" type="button" onclick=destroy();>destroy</button>
 			<script> function destroy(){
-				var categories = console.log(getCookie(categories));
-				console.log(document.write("\n\n"+categories));
+				document.write($.cookies.get(categories));
 				}
 			</script>
 			</ul>
 			<button class="new" type="button" onclick=makePage(all);>Make List</button>
-			
+			<script>
+				function makePage(cookie)
+				{
+					var text = $.cookies.get(cookie);
+					var goodText = decodeURIComponent(text);
+					newWindow = window.open());
+					newWindow.document.write("<html><head><title>Patient Summary</title></head><body>"+cookieProcessor(cookie)+"</body></html>");
+				}
+			</script>
 		</div>
 		<div class="console"> <textarea class="console"></textarea></div>
 
