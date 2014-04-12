@@ -2,7 +2,27 @@
 
 <html>
 <head>
-	<title>DESU DESU DESU DESU DESU</title>
+	<title>Login Page</title>
+	<style> 
+		form {
+			position: absolute;
+			right: 40%;
+			bottom: 30%;
+		}
+		input.submit {
+			position: absolute;
+			bottom: -90%;
+			right: 25%;
+			
+		}
+		img {
+			position: absolute;
+			right: 40%;
+			bottom: 45%;
+			border-radius: 25px;
+			border: 1px black solid;
+		}
+	</style>
 </head>
 
 
@@ -10,12 +30,12 @@
 
 <!-- Type for input can be password, text, or submit -->
 
+<img src="logo.png">
 <div id="forms">
-
-	<form method="post" action="landingPage.php">
+	<form method="post" action="login2.php">
 	Username: <input name="username" type="text" /><br>
 	Password: <input name="password" type="text" /><br>
-	<input name="submit" type="submit" />
+	<input class="submit" name="submit" type="submit" />
 	</form>
 
 </div>
