@@ -1,5 +1,4 @@
 
-
 <?php
     include 'globals.php';
 ?>
@@ -8,12 +7,6 @@
 <?php
 	//create connection and store the data for later use
 	//host, username, password, dbname
-	$host = 'localhost'; 
-	$user = 'cardinalCodeFest'; 
-	$pass = 'test'; 
-	
-	$db = 'cardinalCodeFest';
-	
 	$connect = mysqli_connect($host,$user,$pass, $db);
 	
 	// Check connection
