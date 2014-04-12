@@ -34,9 +34,9 @@
 	
 	echo "<table border='1'>";
 	echo "<tr>";
-	echo "<th>Post Number</th>";
-	echo "<th>Post User</th>";
-	echo "<th>Post Content</th>";
+	echo "<th>Thread Number</th>";
+	echo "<th>User ID</th>";
+	echo "<th>Content</th>";
 	echo "</tr>";
 	
 	while($row = mysqli_fetch_array($result))
