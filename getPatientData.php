@@ -79,14 +79,26 @@
 	 $htmlReturn .= "</table>";
   }
 
-  $catList = $_COOKIE['categories'];
+  if (isset($_COOKIE['categories']))
+  {
+	 $catList = $_COOKIE['categories'];
+  } else {
+  	$catList = "";
+  }
+
   $catList .= "<li>";
   $catList .= $category;
   $catList .= "</li>";
   setcookie("categories", $catList, time()+3600);
 
+  if (isset($_COOKIE['all']))
+  {
   $allList = $_COOKIE['all'];
+  } else {
+  	$allList = "";
+  }
   $allList .= $htmlReturn;
+
   setcookie("all", $allList, time()+3600);
   echo $_COOKIE['all'];
   //header('Location: https://cin.kc8khl.net/cardinalCodefest2014/requestPage.html');
