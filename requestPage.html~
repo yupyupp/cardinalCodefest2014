@@ -31,10 +31,10 @@
 				Category: 
 					<select name="category">
 						  <option value="default" selected="selected"> Choose a category</option>
-						  <option value="GI">General Injuries</option>
-						  <option value="AL">Allergies</option>
-						  <option value="MED">Medication</option>
-						  <option value="CI">Chronic Conditions</option>
+						  <option value="BrokenBones">BrokenBones</option>
+						  <option value="Allergies">Allergies</option>
+						  <option value="MentalIllness">MentalIllness</option>
+						  <option value="ChronicConditions">ChronicConditions</option>
 					</select><br>
 				<input type="submit" value="Get info">
 			</form>
