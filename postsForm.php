@@ -17,7 +17,7 @@
         $tempInt = $tempInt + 1;
         
 
-	$sql = "INSERT INTO messages (postCound, threadID, uID, content)
+	$sql = "INSERT INTO messages (postCount, threadID, uID, content)
 	VALUES
 	('$tempInt', '$_COOKIE[threadID]', '$_COOKIE[uid]', '$_POST[pContent]');";
 
