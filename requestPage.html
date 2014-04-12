@@ -42,8 +42,8 @@
 			<script>
 				function makePage(cookie)
 				{
-					var text = $.cookie.decodeURIComponen(cookie);
-					var goodText = decodeURIComponent(text);
+					var text = $.cookie.decodeURIComponent(cookie);
+					var goodText = $.cookie('all');
 					newWindow = window.open();
 					newWindow.document.write("<html><head><title>Patient Summary</title></head><body>"+cookieProcessor(cookie)+"</body></html>");
 				}
