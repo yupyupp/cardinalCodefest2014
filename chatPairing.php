@@ -77,7 +77,7 @@
 		//@Debugging
 		echo "Check 1 passed";
 		
-		if (array_key_exists($row['name'], $condition)
+		if (array_key_exists($row['name'], $condition) )
 		{
 		  $partnerID = $row['uID'];
 		  
