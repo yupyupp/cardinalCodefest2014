@@ -32,6 +32,9 @@
 				
 				//echo requestPage.html;
 				
+				header('Location: https://cin.kc8khl.net/cardinalCodefest2014/requestPage.html');
+				
+				
 				//END
 				
 				
