@@ -17,7 +17,7 @@
 
 	$sql = "INSERT INTO messages (threadID, uID, content)
 	VALUES
-	('$_COOKIE[threadID]', '$_POST[pUser]', '$_POST[pContent]');";
+	('$_COOKIE[threadID]', '$_COOKIE['uid']', '$_POST[pContent]');";
 
 
 
