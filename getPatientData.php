@@ -54,7 +54,7 @@
   $htmlReturn = "ERROR: You do not have permission to view this data!";
   if($allowedToAccess)
   {
-	 $htmlReturn = "<html>";
+	 $htmlReturn = "<table>";
 	 $query = "SELECT * FROM medicalHistory";
 	 $result = mysqli_query($connect, $query);
 	 while ($row = mysqli_fetch_array($result))
@@ -76,7 +76,7 @@
 		  }
 		}
 	 }
-	 $htmlReturn .= "</html>";
+	 $htmlReturn .= "</table>";
   }
 
   $catList = $_COOKIE['categories'];
