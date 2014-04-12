@@ -72,7 +72,7 @@
 	 //@Debugging
 	 echo "Checking: " . $row['uID'] . " " . $row['name'];
 	 
-	 if (array_key_exists($row['uID'], $sharingUsers)
+	 if (array_key_exists($row['uID'], $sharingUsers) )
 	 {
 		//@Debugging
 		echo "Check 1 passed";
