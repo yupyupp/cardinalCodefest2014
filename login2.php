@@ -26,10 +26,13 @@
 			if ($row['password'] == $_POST['password'])
 			{
 				setcookie("uid", $row['uID'], time()+3600);
-				echo "Account successfully logged in";
+				
+				//echo "Account successfully logged in";
 			}
 			else
 				echo "Incorrect password";
+				
+				include 'login.html';
 		}
 	}
 	
