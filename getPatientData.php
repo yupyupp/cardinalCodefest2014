@@ -89,7 +89,6 @@
   $allList .= $htmlReturn;
   setcookie("all", $allList, time()+3600);
   echo $_COOKIE['all'];
-  header('Location: https://cin.kc8khl.net/cardinalCodefest2014/requestPage.html');
-  echo $_COOKIE['all'];
+  //header('Location: https://cin.kc8khl.net/cardinalCodefest2014/requestPage.html');
   mysqli_close($connect);
 ?>
