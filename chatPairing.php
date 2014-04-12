@@ -91,7 +91,7 @@
   setcookie("threadID", $threadID, time()+3600);
 
 
-  header('Location: https://cin.kc8khl.net/cardinalCodefest2014/postsFront.html');
+  header('Location: https://cin.kc8khl.net/cardinalCodefest2014/postsFront.php');
 
 
   mysqli_close($connect);
