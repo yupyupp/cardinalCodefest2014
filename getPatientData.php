@@ -20,7 +20,6 @@
   $category = $_GET['category'];
   $pID;
 
-
   // Get pID of specified patient
   $query = "SELECT * FROM loginData";
   $result = mysqli_query($connect, $query);
@@ -36,7 +35,6 @@
   // Get permissions of professional with uID for patient with pID in category
   $query = "SELECT * FROM permissions";
   $result = mysqli_query($connect, $query);
-
   $allowedToAccess = false;
   while ($row = mysqli_fetch_array($result))
   {
@@ -56,13 +54,11 @@
   $htmlReturn = "ERROR: You do not have permission to view this data!";
   if($allowedToAccess)
   {
-	 $query = "SELECT * FROM permissions";
+	 $query = "SELECT * FROM medicalHistory";
 	 $result = mysqli_query($connect, $query);
-
 	 $htmlReturn = "<table>";
 	 while ($row = mysqli_fetch_array($result))
 	 {
-	 echo "in while";
 		if ($row['uID'] == $pID)
 		{
 		  if ($row['uID'] == $pID)
@@ -76,7 +72,6 @@
 				$htmlReturn .= "</td><td>";
 				$htmlReturn .= $row['description'];
 				$htmlReturn .= "</td></tr>";
-				echo $htmlReturn;
 			 }
 		  }
 		}
@@ -84,6 +79,6 @@
 	 $htmlReturn .= "</table>";
   }
   setcookie("table", $htmlReturn, time()+3600);
-
+  include 'requestPage.html';
   mysqli_close($connect);
 ?>
