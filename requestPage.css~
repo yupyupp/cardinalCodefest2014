@@ -23,7 +23,6 @@ textarea.console {
 	height: 97%;
 	width: 97%;
 	border: 2px black solid;
-	disabled: true;
 	}
 
 }
