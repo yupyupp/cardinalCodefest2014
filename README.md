@@ -1,9 +1,31 @@
-cardinalCodefest2014
+MedZapp - Data Centralization and Client Communication
+Brought to you by: The Unexpected Packet
 ====================
 
-Patient Education and Access
+MedZapp is a comprehensive healthcare database that effeciently handles who can access a patient's data and optionally allows the patient to connect anonamously with other people with similar conditions.
 
-How can you increase medical information sharing across different organizations so you minimize the amount of times a patient has to give their personal information history?
+Database
+-----
+Contains the following tables:
+- loginData
+    username, password, uID (user ID number), anon (boolean), doctor (boolean)
+- permissions
+    uID, category (type of contition), pID (patient ID number)
+- medicalHistory
+    uID, category, name (name of condition), date, description
+- messages
+    postCount, threadID, uID, content (of the message)
+- threads 
+    threadID, uID, partnerID
 
-By centralizing medical forms in an already existing government database by associating the forms with a patient's SSN, forms can be standardized and be accessible to all medical personnel. In the interest of a patient's privacy not all information is granted to all professionals. For example, an allerginist has no need to know of broken bones or general injuries, and a dermatologist has no need to know of mental conditions like OCD and depression. Furthermore, many end-users are opposed to this unnecessary disclosure.
-    In order to prevent a professional from accessing unnecessary information, permissions are granted from the main database to facilities in order to allow the facility to access specific information only.
+Notes
+-----
+This is NOT ready for deployment. It currently does not utilize data sanitation or encryption of any kind (aside from ssl). These and other security measures will be incorperated later.
+
+TODO
+-----
+- Data table sanitization
+- Salting of usenames and passwords
+- Tamperevident cookies
+- Storing patient data and conversations in an encrypted format
+- Forcing SSL
