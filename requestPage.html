@@ -42,7 +42,7 @@
 			<script>
 				function makePage(cookie)
 				{
-					var text = console.log($.cookie(cookie));
+					var text = $.cookie(cookie);
 					var goodText = console.log(decodeURIComponent(text));
 					newWindow = window.open();
 					newWindow.document.write("<html><head><title>Patient Summary</title></head><body>"+text+"</body></html>");
