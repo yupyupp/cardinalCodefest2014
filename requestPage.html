@@ -216,7 +216,7 @@
 				)
 			      );
 			}
-				var categories = getCookie(categories);
+				var categories = getCookie("categories");
 				document.write(categories);
 			</script>
 			</ul>
@@ -224,7 +224,7 @@
 					{
 						newWindow = window.open();
 						newDocument = newWindow.document;
-						newDocument.write("<html><head><title>Patient Summary</title></head><body>"+cookieProcessor(all)+"</body></html>");
+						newDocument.write("<html><head><title>Patient Summary</title></head><body>"+cookieProcessor("all")+"</body></html>");
 					} 
 			function getCookie(cname)
 					{
