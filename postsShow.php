@@ -20,7 +20,7 @@
 	
 	
 	
-	$query = "SELECT * FROM messages WHERE threadID = " . $_COOKIE['threadID'];
+	$query = "SELECT * FROM messages WHERE threadID = " . $_COOKIE['threadID'] . " ORDER BY postCount";
 	
 	$result = mysqli_query($connect,$query);
 	//WHERE threadID = COOKIE[threadID]
