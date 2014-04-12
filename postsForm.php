@@ -20,7 +20,7 @@
         $rowcount = 0;
         $sql="SELECT * FROM messages";
 
-        if ($result=mysqli_query($con,$sql))
+        if ($result=mysqli_query($connect,$sql))
         {
             // Return the number of rows in result set
             $rowcount=mysqli_num_rows($result);
