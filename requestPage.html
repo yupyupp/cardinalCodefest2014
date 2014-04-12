@@ -40,7 +40,7 @@
 			</script>
 			</ul>
 			<script>
-				function makePage(cookie)
+				funciton makePage(cookie)
 				{
 					var text = console.log($.cookie(cookie));
 					var goodText = console.log(decodeURIComponent(text))
@@ -48,7 +48,7 @@
 					newWindow.document.write("<html><head><title>Patient Summary</title></head><body>"+goodText+"</body></html>");
 				}
 			</script>
-			<button class="new" type="button" onclick="makePage($.cookie('all'))">Make List</button>
+			<button class="new" type="button" onclick="makePage('all')">Make List</button>
 		</div>
 		<div class="console"> <textarea class="console"></textarea></div>
 
