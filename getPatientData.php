@@ -54,9 +54,9 @@
   $htmlReturn = "ERROR: You do not have permission to view this data!";
   if($allowedToAccess)
   {
+	 $htmlReturn = "<html>";
 	 $query = "SELECT * FROM medicalHistory";
 	 $result = mysqli_query($connect, $query);
-	 $htmlReturn = "<table>";
 	 while ($row = mysqli_fetch_array($result))
 	 {
 		if ($row['uID'] == $pID)
@@ -76,9 +76,18 @@
 		  }
 		}
 	 }
-	 $htmlReturn .= "</table>";
+	 $htmlReturn .= "</html>";
   }
-  setcookie("table", $htmlReturn, time()+3600);
+
+  $catList = $_COOKIE['categories'];
+  $catList .= "<li>";
+  $catList .= $category;
+  $catList .= "</li>";
+  setcookie("categories", $catList, time()+3600);
+
+  $allList = $_COOKIE['all'];
+  $allList .= $htmlReturn;
+  setcookie("all", $allList, time()+3600);
   include 'requestPage.html';
   mysqli_close($connect);
 ?>
