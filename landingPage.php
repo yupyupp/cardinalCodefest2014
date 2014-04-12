@@ -27,7 +27,15 @@
 			{
 				setcookie("uid", $row['uID'], time()+3600);
 				
-				include 'requestPage.html';
+				
+				//BEGIN
+				
+				//echo requestPage.html;
+				
+				//END
+				
+				
+				//include 'requestPage.html';
 			}
 			else
 			{
