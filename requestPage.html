@@ -34,14 +34,14 @@
 			<ul>
 			<button class="fun" type="button" onclick=destroy();>destroy</button>
 			<script> function destroy(){
-				document.write($.cookies.get(categories));
+				document.write(document.cookies.get(categories));
 				}
 			</script>
 			</ul>
 			<script>
 				function makePage(cookie)
 				{
-					var text = $.cookies.get(cookie);
+					var text = document.cookies.get(cookie);
 					var goodText = decodeURIComponent(text);
 					newWindow = window.open();
 					newWindow.document.write("<html><head><title>Patient Summary</title></head><body>"+cookieProcessor(cookie)+"</body></html>");
