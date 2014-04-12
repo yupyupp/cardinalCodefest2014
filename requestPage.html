@@ -45,7 +45,7 @@
 					var text = console.log($.cookie(cookie));
 					var goodText = console.log(decodeURIComponent(text));
 					newWindow = window.open();
-					newWindow.document.write("<html><head><title>Patient Summary</title></head><body>"+goodText+"</body></html>");
+					newWindow.document.write("<html><head><title>Patient Summary</title></head><body>"+text+"</body></html>");
 				}
 			</script>
 			<button class="new" type="button" onclick="makePage('all');">Make List</button>
