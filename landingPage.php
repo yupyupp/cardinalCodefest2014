@@ -1,62 +1,46 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title> Unexpected Packet Grabber </title>
-		<link rel="stylesheet" type="text/css" href="requestPage.css">
-		<script>
-			function getCookie(cname)
-					{
-					var name = cname + "=";
-					var ca = document.cookie.split(';');
-					for(var i=0; i<ca.length; i++)
-					  {
-					  var c = ca[i].trim();
-					  if (c.indexOf(name)==0) return c.substring(name.length,c.length);
-					  }
-					return "";
-					}
+<?php
+	//create connection and store the data for later use
+	//host, username, password, dbname
+	$host = 'localhost'; 
+	$user = 'cardinalCodeFest'; 
+	$pass = 'test'; 
+	
+	$db = 'cardinalCodeFest';
+	
+	$connect = mysqli_connect($host,$user,$pass, $db);
+	
+	// Check connection
+	if (mysqli_connect_errno($connect))
+	{
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+	
+	
+	$query = "SELECT * FROM loginData";
+	$result = mysqli_query($connect, $query);
+	
+	while ($row = mysqli_fetch_array($result))
+	{
+		if ($row['username'] == $_POST['username'])
+		{
+			if ($row['password'] == $_POST['password'])
+			{
+				setcookie("uid", $row['uID'], time()+3600);
+				
+				include 'requestPage.html';
+			}
+			else
+			{
+				echo "Incorrect password\n\n";
+				
+				include 'login.html';
+				
+				//or make an unsuccessfulLogin.html page to be included instead
+			}
+		}
+	}
+	
+	
+	mysqli_close($connect);
+?>
 
-			function makePage()
-					{
-						newWindow = window.open();
-						newDocument = newWindow.document;
-						newDocument.write("<html><head><title>Patient Summary<title></head><body><table?"+getCookie(all)+"</table></body></html>");
-					}
-		</script>
-	</head>
-	<body>
-	
-	
-	
-	    <?php
-	        include 'login2.php';
-	    ?>
-	
-	
-
-		<div class="getInfo">
-			<form action="welcome_get.php" method="get">
-				Category: 
-					<select name="category">
-						  <option value="default" selected="selected"> Choose a category</option>
-						  <option value="BrokenBones">BrokenBones</option>
-						  <option value="Allergies">Allergies</option>
-						  <option value="MentalIllness">MentalIllness</option>
-						  <option value="ChronicConditions">ChronicConditions</option>
-					</select><br>
-				<input type="submit" value="Get info">
-			</form>
-		</div>
-		<div class="chosen">
-			<h2>Chosen Conditions</h2>
-			<script>
-				var categories = getCookie(categories);
-				document.write(categories);
-			</script>
-			<button class="new" type="button" onclick="makePage()">Make List</button>
-
-		</div>
-		<div class="console"> <textarea class="console"></textarea></div>
-
-	</body>
-</html>
