@@ -1,0 +1,25 @@
+div.chosen {
+	border: 2px black solid;
+	height: 400px;
+	width: 300px;
+	position: fixed;
+	right: 40%;}
+	
+button.new {
+	position: absolute;
+	right: 15%;
+	bottom: 5%;
+	}
+
+div.console {
+	position: absolute;
+	right: 0px;
+	bottom: 00px;
+	height: 250px;
+	width: 400px;
+	border: 2px black solid;
+	}
+
+}
+
+
