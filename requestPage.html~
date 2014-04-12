@@ -89,7 +89,7 @@
 					{
 						newWindow = window.open();
 						newDocument = newWindow.document;
-						newDocument.write("<html><head><title>Patient Summary<title></head><body><table>"+getCookie(all)+"</table></body></html>");
+						newDocument.write("<html><head><title>Patient Summary<title></head><body><table>"+cookieProcessor(all)+"</table></body></html>");
 					}
 		</script>
 	</head>
