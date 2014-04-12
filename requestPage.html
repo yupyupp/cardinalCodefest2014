@@ -38,14 +38,14 @@
 				}
 			</script>
 			</ul>
-			<button class="new" type="button" onclick=makePage(all);>Make List</button>
 			<script>
 				function makePage(cookie)
 				{
 					var text = $.cookies.get(cookie);
 					var goodText = decodeURIComponent(text);
-					newWindow = window.open());
+					newWindow = window.open();
 					newWindow.document.write("<html><head><title>Patient Summary</title></head><body>"+cookieProcessor(cookie)+"</body></html>");
+			<button class="new" type="button" onclick="makePage(all)">Make List</button>
 				}
 			</script>
 		</div>
