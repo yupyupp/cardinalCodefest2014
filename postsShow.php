@@ -34,6 +34,10 @@
 	
 	echo "<table border='1'>";
 	echo "<tr>";
+	
+	//@RemoveLater
+	echo "<th>Post Count</th>";
+	
 	echo "<th>Thread Number</th>";
 	echo "<th>User ID</th>";
 	echo "<th>Content</th>";
@@ -42,6 +46,10 @@
 	while($row = mysqli_fetch_array($result))
 	{
 	    echo "<tr>";
+	    
+	    //@RemoveLater
+	    echo "<td>" . $row['postCount'] . "</td>";
+	    
 	    echo "<td>" . $row['threadID'] . "</td>";
 	    echo "<td>" . $row['uID'] . "</td>";
 	    echo "<td>" . $row['content'] . "</td>";
