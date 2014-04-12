@@ -29,15 +29,17 @@
 					Patient: <textarea name="patient"></textarea>
 				<input type="submit" value="Get info">
 			</form>
-		</div>
-		<div class="chosen">
-			<h2>Chosen Conditions</h2>
-			<ul>
-			<button class="fun" type="button" onclick=destroy();>List Categories</button>
+
 			<script> function destroy(){
 				document.write($.cookie('categories'));
 				}
 			</script>
+			<button class="fun" type="button" onclick=destroy();>List Categories</button>
+		</div>
+		<div class="chosen">
+			<h2>Chosen Conditions</h2>
+			<ul>
+
 			</ul>
 			<script>
 				function makePage(cookie)
@@ -50,7 +52,11 @@
 			</script>
 			<button class="new" type="button" onclick="makePage('all');">Make List</button>
 		</div>
-		<div class="console"> <textarea class="console"></textarea></div>
+		<div class="console">
+  <p>Brought to you by: The Unexpected Packet
+MedZapp - Data Centralization and Client Communication
+====================
+MedZapp is a comprehensive healthcare database that effeciently handles who can access a patient's data and optionally allows the patient to connect anonamously with other people with similar conditions.</p></div>
 
 	</body>
 </html>
