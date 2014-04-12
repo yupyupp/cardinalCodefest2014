@@ -30,9 +30,11 @@
 				//echo "Account successfully logged in";
 			}
 			else
+			{
 				echo "Incorrect password";
 				
 				include 'login.html';
+			}
 		}
 	}
 	
