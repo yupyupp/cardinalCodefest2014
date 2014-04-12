@@ -21,9 +21,8 @@
   $pID;
 
 
-  // Get uID of specified patient
+  // Get pID of specified patient
   $query = "SELECT * FROM loginData";
-
   $result = mysqli_query($connect, $query);
 
   while ($row = mysqli_fetch_array($result))
@@ -32,35 +31,25 @@
 	 {
 		$pID = $row['uID'];
 	 }
-	 else
-	 {
-		echo 'Invalid Patient';
-		include 'requestPage.html';
-	 }
   }
 
-  // Get permissions of professional with pID
+  // Get permissions of professional with uID for patient with pID in category
   $query = "SELECT * FROM permissions";
-
   $result = mysqli_query($connect, $query);
 
   $allowedToAccess = false;
   while ($row = mysqli_fetch_array($result))
   {
-  if ($row['uID'] == $uID)
-  {
 	 if ($row['uID'] == $uID)
 	 {
-		if ($pID == $row['pID'])
+		if ($row['pID'] == $pID)
 		{
-		  if ( $category == $row['category'])
+		  if ( $row['category'] == $category )
 		  {
 			 $allowedToAccess = true;
-			 echo $allowedToAccess;
 		  }
 		}
 	 }
-  }
   }
 
   // Get patient data if $allowedToAccess
@@ -68,30 +57,33 @@
   if($allowedToAccess)
   {
 	 $query = "SELECT * FROM permissions";
-
 	 $result = mysqli_query($connect, $query);
 
 	 $htmlReturn = "<table>";
 	 while ($row = mysqli_fetch_array($result))
 	 {
-	 if ($row['uID'] == $uID)
-	 {
-		$pID = $row['uID'];
-		if ($row['uID'] == $uID)
+	 echo "in while";
+		if ($row['uID'] == $pID)
 		{
-		  if ($pID == $row['uID'])
+		  if ($row['uID'] == $pID)
 		  {
-			 if ( $category == $row['category'])
+			 if ($row['category'] ==  $category)
 			 {
-				$htmlReturn .= "<tr><td>".$row['date']."</td><td>".$row['name']."</td><td>".$row['description']."</td></tr>";
+				$htmlReturn .= "<tr><td>";
+				$htmlReturn .= $row['date'];
+				$htmlReturn .= "</td><td>";
+				$htmlReturn .= $row['name'];
+				$htmlReturn .= "</td><td>";
+				$htmlReturn .= $row['description'];
+				$htmlReturn .= "</td></tr>";
 				echo $htmlReturn;
 			 }
 		  }
 		}
 	 }
-	 }
 	 $htmlReturn .= "</table>";
   }
   setcookie("table", $htmlReturn, time()+3600);
+
   mysqli_close($connect);
 ?>
