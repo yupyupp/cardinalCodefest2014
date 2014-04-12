@@ -42,9 +42,9 @@
 	while($row = mysqli_fetch_array($result))
 	{
 	    echo "<tr>";
-	    echo "<td>" . $row['postNumber'] . "</td>";
-	    echo "<td>" . $row['postUser'] . "</td>";
-	    echo "<td>" . $row['postContent'] . "</td>";
+	    echo "<td>" . $row['threadID'] . "</td>";
+	    echo "<td>" . $row['uID'] . "</td>";
+	    echo "<td>" . $row['content'] . "</td>";
 	    echo "</tr>";
 	}
 	echo "</table>";
