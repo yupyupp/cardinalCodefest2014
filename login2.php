@@ -2,8 +2,8 @@
 <?php
 	//create connection and store the data for later use
 	//host, username, password, dbname
-	$host = 'http://cin.kc8khl.net'; 
-	$user = 'michael'; 
+	$host = 'localhost'; 
+	$user = 'root'; 
 	$pass = 'passwordz'; 
 	
 	$db = 'cardinalCodeFest';
