@@ -2,11 +2,11 @@
 <?php
 	//create connection and store the data for later use
 	//host, username, password, dbname
-	$host = '127.0.0.1'; 
-	$user = 'root'; 
-	$pass = 'password1'; 
+	$host = 'http://cin.kc8khl.net'; 
+	$user = 'michael'; 
+	$pass = 'passwordz'; 
 	
-	$db = 'test';
+	$db = 'cardinalCodeFest';
 	
 	$connect = mysqli_connect($host,$user,$pass, $db);
 	
@@ -17,7 +17,7 @@
 	}
 	
 	
-	$query = "SELECT * FROM accounts";
+	$query = "SELECT * FROM loginData";
 	$result = mysqli_query($connect, $query);
 	
 	while ($row = mysqli_fetch_array($result))
@@ -26,7 +26,7 @@
 		{
 			if ($row['password'] == $_POST['password'])
 			{
-				setcookie("uid", $row['uid'], time()+3600);
+				setcookie("uid", $row['uID'], time()+3600);
 				echo "Account successfully logged in";
 			}
 			else
