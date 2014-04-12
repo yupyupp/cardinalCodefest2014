@@ -1,10 +1,9 @@
-//stuff lol comments
 <?php
 	//create connection and store the data for later use
 	//host, username, password, dbname
 	$host = 'localhost'; 
-	$user = 'root'; 
-	$pass = 'passwordz'; 
+	$user = 'cardinalCodeFest'; 
+	$pass = 'test'; 
 	
 	$db = 'cardinalCodeFest';
 	
