@@ -1,3 +1,10 @@
+
+
+<?php
+    include 'globals.php';
+?>
+
+
 <?php
 	//create connection and store the data for later use
 	//host, username, password, dbname
