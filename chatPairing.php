@@ -6,6 +6,9 @@
 <?php
   //create connection and store the data for later use
   //host, username, password, dbname
+  echo "DO SHIT.";
+  
+  
   $connect = mysqli_connect($host,$user,$pass, $db);
 
   // Check connection
