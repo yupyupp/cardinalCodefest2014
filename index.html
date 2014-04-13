@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Cardinalcodefest2014 : MedZapp: Data Centralization and Client Communication " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Cardinalcodefest2014</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/sjhaffner/cardinalCodefest2014">View on GitHub</a>
+
+          <h1 id="project_title">Cardinalcodefest2014</h1>
+          <h2 id="project_tagline">MedZapp: Data Centralization and Client Communication </h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/sjhaffner/cardinalCodefest2014/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/sjhaffner/cardinalCodefest2014/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>Brought to you by: The Unexpected Packet</p>
+
+<h1>
+<a name="medzapp---data-centralization-and-client-communication" class="anchor" href="#medzapp---data-centralization-and-client-communication"><span class="octicon octicon-link"></span></a>MedZapp - Data Centralization and Client Communication</h1>
+
+<p>MedZapp is a comprehensive health care database that efficiently handles who can access a patient's data and optionally allows the patient to connect anonymously with other people with similar conditions.</p>
+
+<h2>
+<a name="database" class="anchor" href="#database"><span class="octicon octicon-link"></span></a>Database</h2>
+
+<p>Contains the following tables:</p>
+
+<ul>
+<li>loginData:
+username, password, uID (user ID number), anon (boolean), doctor (boolean)</li>
+<li>permissions:
+uID, category (type of contition), pID (patient ID number)</li>
+<li>medicalHistory:
+uID, category, name (name of condition), date, description</li>
+<li>messages:
+postCount, threadID, uID, content (of the message)</li>
+<li>threads: 
+threadID, uID, partnerID</li>
+</ul><h2>
+<a name="notes" class="anchor" href="#notes"><span class="octicon octicon-link"></span></a>Notes</h2>
+
+<p>This is NOT ready for deployment. It currently does not utilize data sanitation or encryption of any kind (aside from ssl). These and other security measures will be incorporated later.</p>
+
+<h2>
+<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
+
+<ul>
+<li>Data table sanitation</li>
+<li>Salting of usernames and passwords</li>
+<li>Tamper-evident cookies</li>
+<li>Storing patient data and conversations in an encrypted format</li>
+<li>Forcing SSL</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Cardinalcodefest2014 maintained by <a href="https://github.com/sjhaffner">sjhaffner</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
